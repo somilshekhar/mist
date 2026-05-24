@@ -1,12 +1,12 @@
 export const siteData = {
   name: "The Mist",
-  tagline: "a tradition of fine dining.",
+  tagline: "a tradition of Japanese foods.",
   japaneseAccent: "寿司と刺身",
   heroTags: ["配達", "刺身"],
   contact: {
-    address: "2-5-9 Shingashi, Itabashi, Tokyo",
+    address: "123 Demo St, New York, NY",
     phone: "(555) 555-5555",
-    email: "hello@themist.com",
+    email: "shushifz.help@gmail.com",
   },
   hours: {
     closed: "Monday: CLOSED",
@@ -111,40 +111,28 @@ export const siteData = {
       icon: "🍣",
       items: [
         {
-          name: "Tekka Maki",
-          description: "Fresh tuna wrapped in seasoned rice and nori.",
-          price: "$14.00",
-          image: "/images/featured_1.png",
-        },
-        {
-          name: "Salmon Nigiri",
-          description: "Premium salmon over hand-pressed sushi rice.",
-          price: "$12.00",
+          name: "Ebi Nigiri",
+          description: "Fresh shrimp served over hand-pressed seasoned rice.",
+          price: "$80.00",
           image: "/images/featured_2.png",
         },
         {
-          name: "Dragon Roll",
-          description: "Eel and avocado topped with tobiko.",
-          price: "$18.00",
+          name: "Golden Crunch Roll",
+          description: "Tempura shrimp, avocado, cucumber, rolled with crispy panko.",
+          price: "$45.00",
+          image: "/images/excellence_1.png",
+        },
+        {
+          name: "Tekka Maki",
+          description: "Fresh tuna wrapped in seasoned rice and nori.",
+          price: "$120.00",
+          image: "/images/featured_1.png",
+        },
+        {
+          name: "Tsunami Roll",
+          description: "Spicy tuna, cucumber, topped with avocado and sweet soy.",
+          price: "$50.00",
           image: "/images/featured_3.png",
-        },
-      ],
-    },
-    {
-      name: "Noodles & Rice",
-      icon: "🍜",
-      items: [
-        {
-          name: "Tonkotsu Ramen",
-          description: "Rich pork bone broth with chashu and soft egg.",
-          price: "$16.00",
-          image: "/images/excellence_3.png",
-        },
-        {
-          name: "Tempura Udon",
-          description: "Thick wheat noodles with crispy tempura shrimp.",
-          price: "$15.00",
-          image: "/images/delight_udon.png",
         },
       ],
     },
@@ -153,71 +141,95 @@ export const siteData = {
       icon: "🐟",
       items: [
         {
-          name: "Salmon Sashimi",
-          description: "Six pieces of fresh Atlantic salmon.",
-          price: "$16.00",
+          name: "Ebi Nigiri",
+          description: "Fresh shrimp served over hand-pressed seasoned rice.",
+          price: "$80.00",
+          image: "/images/featured_2.png",
+        },
+        {
+          name: "Sake Nigiri",
+          description: "Premium fresh salmon over seasoned rice.",
+          price: "$50.00",
           image: "/images/delight_sashimi.png",
         },
         {
-          name: "Tuna Sashimi",
-          description: "Premium bluefin tuna, thinly sliced.",
-          price: "$20.00",
+          name: "Golden Crunch Roll",
+          description: "Tempura shrimp, avocado, cucumber, rolled with crispy panko.",
+          price: "$45.00",
+          image: "/images/excellence_1.png",
+        },
+        {
+          name: "Black Dragon Roll",
+          description: "Eel and cucumber topped with avocado and sweet eel sauce.",
+          price: "$40.00",
           image: "/images/excellence_2.png",
         },
       ],
     },
     {
-      name: "Drinks",
-      icon: "🍶",
+      name: "Hosomaki",
+      icon: "🍱",
       items: [
         {
-          name: "Matcha Latte",
-          description: "Ceremonial grade matcha with steamed milk.",
-          price: "$6.00",
-          image: "/images/blog_2.png",
+          name: "Black Dragon Roll",
+          description: "Eel and cucumber topped with avocado and sweet eel sauce.",
+          price: "$40.00",
+          image: "/images/excellence_2.png",
         },
         {
-          name: "Sake Selection",
-          description: "Premium junmai daiginjo, served chilled.",
-          price: "$12.00",
-          image: "/images/blog_1.png",
+          name: "Tekka Maki",
+          description: "Fresh tuna wrapped in seasoned rice and nori.",
+          price: "$120.00",
+          image: "/images/featured_1.png",
+        },
+        {
+          name: "Maguro Nigiri",
+          description: "Premium yellowfin tuna over hand-pressed seasoned rice.",
+          price: "$30.00",
+          image: "/images/featured_2.png",
+        },
+        {
+          name: "Tsunami Roll",
+          description: "Spicy tuna, cucumber, topped with avocado and sweet soy.",
+          price: "$50.00",
+          image: "/images/featured_3.png",
         },
       ],
     },
   ],
   testimonials: [
     {
-      name: "Sarah Mitchell",
-      role: "Food Critic",
+      name: "Savannah Nguyen",
+      role: "ui/ux designer, austria",
       quote:
-        "Absolutely delightful! The sushi here is always fresh and beautifully presented, with a fantastic variety of rolls and sashimi to choose from.",
+        "An unforgettable sushi experience. I’ve had sushi at many places, but nothing compares to the quality and craftsmanship here. From the moment we walked in, the warm and inviting ambiance.",
       rating: 5,
     },
     {
-      name: "James Tanaka",
-      role: "Regular Customer",
+      name: "Darlene Robertson",
+      role: "Webflow developer, USA",
       quote:
-        "The Mist has become my go-to spot for Japanese cuisine. The attention to detail in every dish is remarkable, and the atmosphere is pure elegance.",
+        "Services are very good. Their rates are also very reasonable and compare to other professional is restaurant. I was also impressed with the hospitality and the attention I was got that.",
       rating: 5,
     },
     {
-      name: "Emily Chen",
-      role: "Food Blogger",
+      name: "Brooklyn Simmons",
+      role: "CEo OF Agency, Canada",
       quote:
-        "From the moment you walk in, you know you're in for something special. The omakase experience here rivals anything I've had in Tokyo.",
+        "We ordered the Dragon Roll, Salmon Nigiri, and the Chef’s Special, and each bite was pure perfection. The seafood was incredibly fresh, the rice was seasoned just right, and the balance of flavors was.",
       rating: 5,
     },
     {
-      name: "David Park",
-      role: "Customer",
+      name: "Leslie Alexander",
+      role: "Fashion Designer, LOndon",
       quote:
-        "An unforgettable dining experience. The wagyu beef and premium sashimi selection are world-class. The staff's hospitality is second to none.",
+        "A hidden gem for sushi lovers. This restaurant is a must-visit for anyone who loves authentic Japanese cuisine. The Sashimi Platter was unbelievably fresh, and the Eel Nigiri melted in my mouth.",
       rating: 5,
     },
   ],
   blogs: [
     {
-      title: "The Art of Flavor: How We Craft Each Plate with Care",
+      title: "The Art of Flavor: How We Craft Each Plate with Care.",
       category: "Culinary Arts",
       excerpt:
         "Discover the meticulous process behind every dish at The Mist, from ingredient selection to final presentation.",
@@ -225,26 +237,18 @@ export const siteData = {
       date: "Mar 15, 2025",
     },
     {
-      title: "Zen and the Art of Tea: A Journey Through Japanese Tea Culture",
+      title: "A Taste of Tradition: The Story Behind Our Signature Dish.",
       category: "Culture",
       excerpt:
-        "Explore the rich tradition of Japanese tea ceremonies and how they influence our dining philosophy.",
+        "Explore the rich tradition of Japanese cooking and how it influences our dining philosophy.",
       image: "/images/blog_2.png",
       date: "Mar 08, 2025",
-    },
-    {
-      title: "From Ocean to Plate: Sourcing the Freshest Seafood",
-      category: "Ingredients",
-      excerpt:
-        "Learn about our commitment to sustainability and how we source the finest seafood for our dishes.",
-      image: "/images/excellence_2.png",
-      date: "Feb 28, 2025",
     },
   ],
   tickerTexts: [
     "choose favorite flavors",
     "discover all menu",
-    "order your favorites",
-    "experience fine dining",
+    "order your Sushi",
+    "choose favorite flavors",
   ],
 };

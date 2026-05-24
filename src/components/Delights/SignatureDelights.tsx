@@ -17,30 +17,40 @@ export default function SignatureDelights() {
     setCurrent((c) => (c === slides.length - 1 ? 0 : c + 1));
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.querySelector(`.${styles.plateImage}`)?.classList.add(styles.visible);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.3 }
-    );
-    if (plateRef.current) observer.observe(plateRef.current);
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      if (!plateRef.current) return;
+      const rect = plateRef.current.getBoundingClientRect();
+      const scrolled = window.innerHeight - rect.top;
+      const plateImg = plateRef.current.querySelector(`.${styles.plateImage}`) as HTMLElement;
+      if (!plateImg) return;
+
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        // Rotate plate based on scroll progress
+        const rotation = (scrolled * 0.15) % 360;
+        // Translate up slightly as it approaches viewport center
+        const translateY = Math.max(0, 40 - scrolled * 0.1);
+        plateImg.style.transform = `translateY(${translateY}px) rotate(${rotation}deg)`;
+        plateImg.style.opacity = "1";
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Initial call
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const tickerContent = siteData.tickerTexts;
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="signature-delights">
       <div className={styles.titleWrapper}>
         <h2 className={styles.sectionTitle}>
-          Freshness in Every Dish. Authentic Taste.
+          Freshness in Sushi. Authentic Taste.
         </h2>
         <p className={styles.sectionDetails}>
-          Absolutely delightful! The cuisine here is always fresh and beautifully
-          presented, with a fantastic variety of dishes to choose from.
+          Absolutely delightful! The sushi here is always fresh and beautifully
+          presented, with a fantastic variety of rolls and sashimi to choose from.
         </p>
       </div>
 

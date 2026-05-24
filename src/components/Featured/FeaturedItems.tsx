@@ -37,7 +37,7 @@ export default function FeaturedItems() {
   }, [items.length]);
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="featured-items">
       <div className={styles.vhWrap} ref={sectionRef}>
         <div className={styles.sticky}>
           <div className={styles.flex}>
@@ -60,16 +60,18 @@ export default function FeaturedItems() {
                         alt={item.name}
                         fill
                         className={styles.itemImage}
-                        sizes="280px"
+                        sizes="160px"
                       />
                     </div>
                     <div className={styles.itemPrice}>{item.price}</div>
                     <p className={styles.itemDescription}>
                       {item.description}
                     </p>
-                    <a href="#" className="primary-button">
-                      Add to Cart
-                    </a>
+                    <div>
+                      <a href="#" className="primary-button">
+                        Add to Cart
+                      </a>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -90,25 +92,15 @@ export default function FeaturedItems() {
                   <div
                     key={item.name}
                     className={`${styles.stackImage} ${
-                      i === 0
-                        ? styles.one
-                        : i === 1
-                        ? styles.two
-                        : styles.three
+                      activeIndex === i ? styles.active : ""
                     }`}
-                    style={{
-                      opacity: activeIndex >= i ? 1 : 0.3,
-                      transform:
-                        activeIndex >= i
-                          ? "translateY(0)"
-                          : "translateY(20px)",
-                    }}
                   >
                     <Image
                       src={item.photo}
                       alt={`${item.name} photo`}
                       fill
                       className={styles.stackImg}
+                      priority={i === 0}
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>

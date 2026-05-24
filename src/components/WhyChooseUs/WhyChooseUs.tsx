@@ -28,19 +28,19 @@ export default function WhyChooseUs() {
   }, []);
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="about">
       <div className="container">
         <div className={styles.titleFlex}>
           <div className={styles.titleLeft}>
             <h2 className={styles.sectionTitle}>
-              Handcrafted Dishes, Made with Passion.
+              Handcrafted Sushi, Made with Passion.
             </h2>
           </div>
           <div className={styles.detailsRight}>
             <p className={styles.sectionDetails}>
-              Craving authentic Japanese cuisine? We&apos;ve got you covered!
-              From classic rolls to chef&apos;s special creations, our menu is
-              packed with fresh, flavorful, and mouthwatering delights.
+              Craving sushi? We&apos;ve got you covered! From classic rolls to chef&apos;s
+              special creations, our menu is packed with fresh, flavorful, and
+              mouthwatering Japanese dishes.
             </p>
           </div>
         </div>
@@ -48,7 +48,9 @@ export default function WhyChooseUs() {
         <div className={styles.contactBar}>
           <div
             className={styles.infoBlock}
-            ref={(el) => { blocksRef.current[0] = el; }}
+            ref={(el) => {
+              blocksRef.current[0] = el;
+            }}
           >
             <div className={styles.infoTitle}>Find Us</div>
             <div className={styles.infoText}>{siteData.contact.address}</div>
@@ -57,7 +59,9 @@ export default function WhyChooseUs() {
           </div>
           <div
             className={styles.infoBlock}
-            ref={(el) => { blocksRef.current[1] = el; }}
+            ref={(el) => {
+              blocksRef.current[1] = el;
+            }}
             style={{ transitionDelay: "0.15s" }}
           >
             <div className={styles.infoTitle}>Opening Hours</div>
@@ -67,7 +71,9 @@ export default function WhyChooseUs() {
           </div>
           <div
             className={styles.reservationWrap}
-            ref={(el) => { blocksRef.current[2] = el; }}
+            ref={(el) => {
+              blocksRef.current[2] = el;
+            }}
             style={{ transitionDelay: "0.3s" }}
           >
             <a href="/reservation" className={styles.reservationBtn}>

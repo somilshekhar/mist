@@ -127,13 +127,12 @@
   max-width: 80%;
   height: auto;
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(30px) rotate(0deg);
+  transition: opacity 1s ease;
 }
 
 .plateImage.visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 /* Ticker */
