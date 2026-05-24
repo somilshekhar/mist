@@ -22,7 +22,7 @@ export default function HeroBanner() {
       const viewportHeight = window.innerHeight;
       const scrolled = -rect.top;
       const maxScroll = sectionHeight - viewportHeight;
-      
+
       if (maxScroll <= 0) return;
 
       const progress = Math.max(0, Math.min(1, scrolled / maxScroll));
@@ -72,7 +72,7 @@ export default function HeroBanner() {
                 {siteData.heroTags[1]}
               </span>
             </div>
-            <h1 className={styles.bannerTitle}>Sushi bar</h1>
+            <h1 className={styles.bannerTitle}>The Mist</h1>
             <h2 className={styles.bannerSubTitle}>{siteData.tagline}</h2>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default function HeroBanner() {
                     {siteData.heroTags[1]}
                   </span>
                 </div>
-                <h1 className={styles.overlayTitle}>Sushi bar</h1>
+                <h1 className={styles.overlayTitle}>The Mist</h1>
                 <h2 className={styles.overlaySubTitle}>{siteData.tagline}</h2>
                 <div className={styles.buttonWrap}>
                   <a href="/reservation" className="primary-button">

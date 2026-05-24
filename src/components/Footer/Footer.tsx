@@ -4,7 +4,7 @@ import { siteData } from "@/data/siteData";
 import styles from "./Footer.module.css";
 
 const tickerContent = [
-  "The Mist Sushi Bar",
+  "The Mist The Mist",
   "a tradition of Japanese foods",
   "reserve your table",
 ];
@@ -28,7 +28,7 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      
+
       <footer className={styles.footer}>
         <div className={styles.container}>
           <div className={styles.top}>
