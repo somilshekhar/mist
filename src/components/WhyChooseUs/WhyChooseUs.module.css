@@ -1,0 +1,227 @@
+.section {
+  padding: 120px 0;
+  background-color: var(--color-bg-dark);
+}
+
+.titleFlex {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.titleLeft {
+  flex: 1;
+}
+
+.sectionTitle {
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-white);
+  line-height: 1.15;
+}
+
+.detailsRight {
+  flex: 1;
+  max-width: 410px;
+}
+
+.sectionDetails {
+  font-size: var(--fs-md);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* Contact info bar */
+.contactBar {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  padding: var(--spacing-2xl) 0;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.infoBlock {
+  flex: 1;
+  padding: 0 var(--spacing-xl);
+  border-right: 1px solid var(--color-border-light);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.infoBlock.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.infoBlock:first-child {
+  padding-left: 0;
+}
+
+.infoBlock:last-child {
+  border-right: none;
+}
+
+.infoTitle {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-accent-gold);
+  margin-bottom: var(--spacing-md);
+}
+
+.infoText {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  line-height: 2;
+}
+
+.reservationWrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--spacing-xl);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reservationWrap.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reservationBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 48px;
+  font-family: var(--font-primary);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-text-white);
+  background: transparent;
+  border: 1px solid var(--color-border-light);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color var(--transition-base);
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.reservationBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-accent-gold);
+  transform: translateY(100%);
+  transition: transform var(--transition-slow);
+  z-index: -1;
+}
+
+.reservationBtn:hover::before {
+  transform: translateY(0);
+}
+
+/* Features grid */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.feature {
+  padding: var(--spacing-xl);
+  text-align: center;
+  border-right: 1px solid var(--color-border-light);
+}
+
+.feature:last-child {
+  border-right: none;
+}
+
+.featureIcon {
+  font-size: var(--fs-4xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.featureTitle {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-white);
+  margin-bottom: var(--spacing-sm);
+}
+
+.featureDetails {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .titleFlex {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .detailsRight {
+    max-width: none;
+  }
+
+  .contactBar {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .infoBlock {
+    padding: 0;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border-light);
+    padding-bottom: var(--spacing-xl);
+  }
+
+  .infoBlock:last-child {
+    border-bottom: none;
+  }
+
+  .reservationWrap {
+    padding: var(--spacing-xl) 0 0;
+  }
+
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature {
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .feature:nth-child(2n) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature {
+    border-right: none;
+  }
+}

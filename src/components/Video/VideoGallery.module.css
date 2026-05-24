@@ -1,0 +1,81 @@
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.videoWrapper {
+  position: relative;
+  height: 80vh;
+  min-height: 500px;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.videoOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 13, 13, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playButton {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-base);
+  color: var(--color-text-white);
+  font-size: var(--fs-2xl);
+}
+
+.playButton:hover {
+  background: var(--color-accent-gold);
+  border-color: var(--color-accent-gold);
+  transform: scale(1.1);
+}
+
+/* Fallback image when no video */
+.fallbackImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Wave overlay at bottom */
+.waveOverlay {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.waveSvg {
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .videoWrapper {
+    height: 50vh;
+    min-height: 300px;
+  }
+
+  .playButton {
+    width: 70px;
+    height: 70px;
+    font-size: var(--fs-xl);
+  }
+}
